@@ -1,0 +1,80 @@
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #081329;
+    overflow: hidden;
+}
+
+.wrapper   {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: colorful 30s linear infinite;
+}
+
+@keyframes colorFul   {
+    100%   {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.bar-seconds,
+.number-hous   {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+}
+
+.bar-seconds span   {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 6deg));
+    inset: 20px;
+    text-align: center;
+}
+
+.bar-seconds span p   {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background:  #0ef;
+}
+
+.bar-seconds span:nth-chied(5n) p {
+    background: red;
+    width: 6px;
+    height: 18px;
+    transform: translateY(1px);
+}
+
+.number-hours span   {
+    transform: rotate(calc(van(--index) * 30deg));
+    inset: 6px;
+    text-align: center;
+}
+
+.hands-box   {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hands-box .hard   {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
