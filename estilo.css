@@ -78,3 +78,85 @@ body   {
     display: flex;
     justify-content: center;
 }
+
+.hands-box .hand1   {
+   display: inline-block; 
+   transform-origin: bottom;
+   border-radius: 50%;
+   box-shadow: 0 0 10px #0ef;
+}
+
+.hands-box .hours i   {
+    display: inline-block;
+}
+
+.hands-box .minutes i   {
+    display: inline-block;
+}
+
+.hands-box .seconds i   {
+    display: inline-block;
+}
+
+.hands-box .hours   {
+    width: 320px;
+    height: 320px;
+}
+
+.hands-box .hours i   {
+    width: 8px;
+    height: 160px;
+    background: #0ef;
+}
+
+.hands-box .minutes   {
+    width: 506px;
+    height: 390px;
+}
+
+.hands-box .minutes::before   {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #0ef;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #0ef;
+    
+}
+
+.hands-box .minutes1   {
+    width: 8px;
+    height: 200px;
+    background: #0ef;
+}
+
+hands-box .seconds   {
+    width: 526px;
+    height: 526px;
+}
+
+.hands-box .seconds::before   {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);    
+}
+
+.hands-box .seconds1   {
+    width: 4px;
+    height: 235px;
+    width: 4px;
+    background: white;
+    transform: rotate(160deg);
+    margin-right: 130px;
+    margin-top: 150px;
+    box-shadow: none;
+}
