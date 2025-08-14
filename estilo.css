@@ -70,7 +70,7 @@ body   {
 }
 
 .number-hours span p   {
-    font-size: 52px;
+    font-size: 42px;
     color: #0ef;
     text-shadow: 0 0 10px #0ef;
     transform: rotate(calc(var(--index) * -30deg));
@@ -99,19 +99,19 @@ body   {
 
 .hands-box .hours   {
     width: 320px;
-    height: 210px;
+    height: 150px;
 }    
     
 
 .hands-box .hours i   {
     width: 8px;
-    height: 110px;
+    height: 85px;
     background: #0ef;    
 }
 
 .hands-box .minutes   {
     width: 450px;
-    height: 320px;    
+    height: 250px;    
 }
 
 .hands-box .minutes::before   {
@@ -129,13 +129,13 @@ body   {
 
 .hands-box .minutes i   {
     width: 8px;
-    height: 170px;
+    height: 130px;
     background: #0ef;    
 }
 
 .hands-box .seconds   {
     width: 450px;
-    height: 350px;
+    height: 330px;
 }    
 
 .hands-box .seconds::before   {
