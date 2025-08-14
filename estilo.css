@@ -1,3 +1,4 @@
+
 *   {
     margin: 0;
     padding: 0;
@@ -9,39 +10,40 @@ body   {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #081329;
+    background: #081b29;
     overflow: hidden;
 }
 
 .wrapper   {
     position: relative;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
+    width: 400px;
+    height: 400px;    
+    border-radius: 50%;    
     display: flex;
     justify-content: center;
     align-items: center;
     animation: colorful 30s linear infinite;
+    
 }
 
-@keyframes colorFul   {
+@keyframes colorful   {
     100%   {
         filter: hue-rotate(360deg);
     }
 }
 
 .bar-seconds,
-.number-hous   {
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
+.number-hours   {
+   position: absolute; 
+   width: 100%;
+   height: 100%;   
+   border-radius: 50%;
 }
 
 .bar-seconds span   {
     position: absolute;
     transform: rotate(calc(var(--index) * 6deg));
-    inset: 20px;
+    inset: -20px;
     text-align: center;
 }
 
@@ -49,20 +51,29 @@ body   {
     display: inline-block;
     width: 2px;
     height: 12px;
-    background:  #0ef;
+    background: #0ef;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #0ef;
 }
 
-.bar-seconds span:nth-chied(5n) p {
-    background: red;
+.bar-seconds span:nth-child(5n) p   {    
     width: 6px;
     height: 18px;
     transform: translateY(1px);
 }
 
-.number-hours span   {
-    transform: rotate(calc(van(--index) * 30deg));
+.number-hours span  {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 30deg));
     inset: 6px;
     text-align: center;
+}
+
+.number-hours span p   {
+    font-size: 52px;
+    color: #0ef;
+    text-shadow: 0 0 10px #0ef;
+    transform: rotate(calc(var(--index) * -30deg));
 }
 
 .hands-box   {
@@ -72,46 +83,35 @@ body   {
     align-items: center;
 }
 
-.hands-box .hard   {
+.hands-box .hand   {
     position: absolute;
     border-radius: 50%;
     display: flex;
     justify-content: center;
 }
 
-.hands-box .hand1   {
-   display: inline-block; 
-   transform-origin: bottom;
-   border-radius: 50%;
-   box-shadow: 0 0 10px #0ef;
-}
-
-.hands-box .hours i   {
+.hands-box .hand i   {
     display: inline-block;
-}
-
-.hands-box .minutes i   {
-    display: inline-block;
-}
-
-.hands-box .seconds i   {
-    display: inline-block;
+    transform-origin: bottom;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0ef;
 }
 
 .hands-box .hours   {
     width: 320px;
-    height: 320px;
-}
+    height: 210px;
+}    
+    
 
 .hands-box .hours i   {
     width: 8px;
-    height: 160px;
-    background: #0ef;
+    height: 110px;
+    background: #0ef;    
 }
 
 .hands-box .minutes   {
-    width: 506px;
-    height: 390px;
+    width: 450px;
+    height: 320px;    
 }
 
 .hands-box .minutes::before   {
@@ -124,19 +124,19 @@ body   {
     background: #0ef;
     border-radius: 50%;
     box-shadow: 0 0 5px #0ef;
-    
+
 }
 
-.hands-box .minutes1   {
+.hands-box .minutes i   {
     width: 8px;
-    height: 200px;
-    background: #0ef;
+    height: 170px;
+    background: #0ef;    
 }
 
-hands-box .seconds   {
-    width: 526px;
-    height: 526px;
-}
+.hands-box .seconds   {
+    width: 450px;
+    height: 350px;
+}    
 
 .hands-box .seconds::before   {
     content: "";
@@ -146,17 +146,13 @@ hands-box .seconds   {
     width: 20px;
     height: 20px;
     background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .5);    
+    border-radius: 50%;    
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
 }
 
-.hands-box .seconds1   {
+.hands-box .seconds i   {
     width: 4px;
-    height: 235px;
-    width: 4px;
-    background: white;
-    transform: rotate(160deg);
-    margin-right: 130px;
-    margin-top: 150px;
-    box-shadow: none;
+    height: calc(140px + 70px);
+    background: white;  
+    box-shadow: none;  
 }
